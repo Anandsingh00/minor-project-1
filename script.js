@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     const  errorMeassage = document.getElementById('error-message');
     
 
-const API_KEY ="8f51b35f3eba958622111cf5f6148150";
+
 
     cityInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
@@ -37,6 +37,7 @@ const API_KEY ="8f51b35f3eba958622111cf5f6148150";
     async function fetchWeatherData(city){
         //gets the data
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
+
         const response = await fetch(url);
         console.log(typeof response);
         console.log("RESPONSE",response);
