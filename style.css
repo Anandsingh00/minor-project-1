@@ -1,0 +1,87 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background:url("background.jpg") ;
+    display: flex;
+   background-size: cover;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+#container{
+    background: rgba(255, 255, 255, 0.1);
+   
+    padding: 30px;
+    border-radius:30px;
+    width:100%;
+    max-width:400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(10px); /* glass blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+h1{
+    text-align:center;
+    padding-bottom: 14px;
+}
+
+#city-input{
+    flex:1;
+    padding: 7px ;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    
+    transition: background 0.3s, box-shadow 0.3s;
+    background: rgba(255, 255, 255, 0.2);
+}
+#city-input::placeholder {
+    color: white;
+    opacity: 1;  /* Ensures it's fully white and not faded */
+}
+
+button {
+    padding: 10px 15px;
+    background-color:crimson;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(193, 17, 52);
+}
+#weather-info {
+    background: rgba(255, 255, 255, 0.1); /* translucent white */
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin-top: 20px;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    max-width: 350px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: hidden state to match your .hidden class */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    display: none;
+}
